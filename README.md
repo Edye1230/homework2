@@ -76,22 +76,22 @@ console.log(pm);
 ¿Cuál crees que será el resultado de la ejecución de estas operaciones?:
 
 ```javascript
-6 / "3"
-"2" * "3"
-4 + 5 + "px"
-"$" + 4 + 5
-"4" - 2
-"4px" - 2
-7 / 0
-{}[0]
-parseInt("09")
-5 && 2
-2 && 5
-5 || 0
-0 || 5
-[3]+[3]-[10]
-3>2>1
-[] == ![]
+6 / "3" // 2 number
+"2" * "3" //6 number
+4 + 5 + "px" //9px
+"$" + 4 + 5 //$9 -- $45
+"4" - 2 //2
+"4px" - 2 //NaN 
+7 / 0 //Infinity
+{}[0] // ?? -- undefined
+parseInt("09") //9
+5 && 2 //true -- 2
+2 && 5 //true -- 5
+5 || 0 //5
+0 || 5 //5
+[3]+[3]-[10]  //[-4]
+3>2>1 //false
+[] == ![] //true
 ```
 
 > Si te quedó alguna duda repasá con [este artículo](http://javascript.info/tutorial/object-conversion).
@@ -113,6 +113,8 @@ function test() {
 }
 
 test();
+//a
+//2
 ```
 
 Y el de este código? :
@@ -128,7 +130,7 @@ function getFood(food) {
     return snack;
 }
 
-getFood(false);
+getFood(false);//retorna Meow Mix
 ```
 
 
@@ -148,11 +150,11 @@ var obj = {
    }
 };
 
-console.log(obj.prop.getFullname());
+console.log(obj.prop.getFullname()); //Aurelio De Rosa
 
 var test = obj.prop.getFullname;
 
-console.log(test());
+console.log(test()); //Aurelio De Rosa
 ```
 
 ### Event loop
@@ -168,4 +170,8 @@ function printing() {
 }
 
 printing();
+//1
+//4
+//3
+//2
 ```
